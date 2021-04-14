@@ -5,7 +5,7 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
+import {Button} from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
@@ -18,7 +18,6 @@ const useStyles = makeStyles({
   });
 
 const News = (props) => {
-    console.log(props);
     const {title, description, urlToImage} = props.article;
     const classes = useStyles();
     return (
@@ -39,11 +38,11 @@ const News = (props) => {
                 </CardContent>
             </CardActionArea>
             <CardActions>
-                <Button size="small" color="primary">
+                <Button size="small" varient= "contained" color="primary">
                     Share
                 </Button>
-                <Button size="small" color="primary">
-                    Learn More
+                <Button size="small" color="primary" >
+                   Learn More
                 </Button>
             </CardActions>
         </Card>
